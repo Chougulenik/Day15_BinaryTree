@@ -9,6 +9,9 @@ public class Main {
 		tree.add(30);
 		tree.add(70);
 		
+		int size = BinaryTree.getSize();
+		System.out.println(size);
+		
 	}
 
 }
