@@ -9,8 +9,11 @@ public class Main {
 		tree.add(30);
 		tree.add(70);
 		
-		int size = BinaryTree.getSize();
+		int size = tree.getSize();
 		System.out.println(size);
+		tree.print();
+		tree.search(30);
+		tree.print();
 		
 	}
 
