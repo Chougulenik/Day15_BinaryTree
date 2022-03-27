@@ -1,5 +1,7 @@
 package com.bridgelabz.binarytree;
 
+import java.util.ArrayDeque;
+import java.util.Queue;
 import java.util.Stack;
 
 import org.w3c.dom.Node;
@@ -71,6 +73,33 @@ public class BinaryTree<K extends Comparable<K>> {
 				System.out.println("Element is not present");
 			}
 		}
+		}
+		
+		public void levelPrint() {
+			if(root == null) {
+				return;
+			}
+			Queue<INode> mq = new ArrayDeque<>();
+			mq.add(root);
+			while(mq.size() > 0) {
+				int count = mq.size();
+				for(int i =0; i<count; i++) {
+					INode node = mq.remove();
+					System.out.print(node.key+ " ");
+					
+					if(node.left != null) {
+						mq.add(node.left);
+					}
+					
+					if(node.right != null) {
+						mq.add(node.right);
+					}
+				}
+				System.out.println();
+				
+			}
+			
+		
 
 	}
 
